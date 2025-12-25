@@ -6,9 +6,10 @@ from selenium.webdriver.chrome.service import Service
 @pytest.fixture(scope="function")
 def driver(request): # Added 'request' to allow hook to access the driver
     options = webdriver.ChromeOptions()
-    #options.add_argument("--headless=new")
-    #options.add_argument("--no-sandbox")
-    #options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--headless=new")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-gpu")
     
     service = Service() 
     driver = webdriver.Chrome(service=service, options=options)
