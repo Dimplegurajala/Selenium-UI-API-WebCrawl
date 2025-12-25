@@ -1,4 +1,4 @@
-name: TenForce Practice Crawl
+name: Practice Crawl
 on:
   push:
     branches: [ branch-4 ]
