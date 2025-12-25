@@ -2,6 +2,7 @@ import csv
 import os
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
+from selenium.webdriver.support import expected_conditions as EC
 
 # Ensure the name is exactly SauceDemoCrawler
 class SauceDemoCrawler(BasePage):
@@ -12,6 +13,7 @@ class SauceDemoCrawler(BasePage):
 
     def execute_crawl_and_save(self):
         self.driver.get("https://www.saucedemo.com/inventory.html")
+        self.wait.until(EC.presence_of_all_elements_located(self.product_name))
         
         name_elements = self.driver.find_elements(*self.product_name)
         price_elements = self.driver.find_elements(*self.product_price)
