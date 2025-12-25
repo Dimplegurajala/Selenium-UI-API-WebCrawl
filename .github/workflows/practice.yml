@@ -17,3 +17,7 @@ jobs:
         run: pip install selenium webdriver-manager
       - name: Run Practice Scraper
         run: python pages/data_crawl.py
+      - name: Run Practice Scraper
+        env:
+          PYTHONPATH: .
+        run: pytest tests/test_crawl.py --html=report.html --self-contained-html
