@@ -8,16 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
       - name: Install Dependencies
-        # Removed pandas
-        run: pip install selenium webdriver-manager
-      - name: Run Practice Scraper
-        run: python pages/data_crawl.py
+        run: pip install selenium webdriver-manager pytest pytest-html
+
       - name: Run Practice Scraper
         env:
           PYTHONPATH: .
+        #  run via pytest to handle imports and reports
         run: pytest tests/test_crawl.py --html=report.html --self-contained-html
