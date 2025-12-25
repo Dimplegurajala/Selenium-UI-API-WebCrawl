@@ -1,0 +1,19 @@
+name: TenForce Practice Crawl
+on:
+  push:
+    branches: [ branch-4 ]
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Dependencies
+        # Removed pandas
+        run: pip install selenium webdriver-manager
+      - name: Run Practice Scraper
+        run: python scripts/tenforce_crawl.py
