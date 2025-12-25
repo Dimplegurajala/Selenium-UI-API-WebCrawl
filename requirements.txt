@@ -1,0 +1,3 @@
+pytest>=7.4.0
+selenium>=4.11.0    # Minimum version for built-in Selenium Manager
+pytest-html>=4.0.0  # Required for the modern 'extra' hook logic

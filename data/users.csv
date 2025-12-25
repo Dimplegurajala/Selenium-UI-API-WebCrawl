@@ -1,0 +1,4 @@
+user,pwd,expected,test_id
+standard_user,secret_sauce,success,Valid_Login
+problem_user,secret_sauce,success,Problem_User_Login
+dimple_user,dimple_sauce,fail,Invalid_Credentials_Check

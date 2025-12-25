@@ -1,0 +1,19 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+venv/
+env/
+.env
+
+# Testing artifacts
+.pytest_cache/
+report.html
+screenshots/
+*.log
+
+# IDEs
+.vscode/
+.idea/
