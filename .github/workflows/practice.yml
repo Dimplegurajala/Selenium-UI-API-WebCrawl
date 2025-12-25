@@ -16,4 +16,4 @@ jobs:
         # Removed pandas
         run: pip install selenium webdriver-manager
       - name: Run Practice Scraper
-        run: python scripts/tenforce_crawl.py
+        run: python pages/data_crawl.py
